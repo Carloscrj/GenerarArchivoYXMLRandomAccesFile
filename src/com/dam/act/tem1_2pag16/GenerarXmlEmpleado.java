@@ -58,13 +58,11 @@ public class GenerarXmlEmpleado {
 				int id;
 				
 				while (raf.getFilePointer() < raf.length()) {  
-					
+								
 				//Crear elementos y añadirlos al nodo raíz:
-					Element elemento = document.createElement("empleado");
-				
-	
-					
+					Element elemento = document.createElement("empleado");				
 					document.getDocumentElement().appendChild(elemento);
+					
 					//Es hijo de 'elemento' empleado:
 					Element elemento2 = document.createElement("id");							
 					Text texto = document.createTextNode(String.valueOf(raf.readInt()));
